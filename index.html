@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CARE FIRST PHARMACEUTICAL - Official Portal</title>
+    <style>
+        :root {
+            --primary-color: #0b3c5d;
+            --secondary-color: #328cc1;
+            --accent-color: #d9b310;
+            --bg-color: #f4f7f6;
+            --text-color: #1d2731;
+            --white: #ffffff;
+            --border-radius: 8px;
+            --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+        }
+
+        .logo h1 {
+            font-size: 1.4rem;
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            font-size: 0.8rem;
+            display: block;
+            color: var(--accent-color);
+            font-weight: normal;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+        }
+
+        nav a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--accent-color);
+        }
+
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: var(--white);
+            text-align: center;
+            padding: 4rem 1rem;
+        }
+
+        .hero h2 {
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto 1.5rem auto;
+            opacity: 0.9;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: var(--primary-color);
+            padding: 0.75rem 1.5rem;
+            border-radius: var(--border-radius);
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #f1c40f;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            margin-bottom: 2rem;
+        }
+
+        .card-header {
+            border-bottom: 2px solid var(--bg-color);
+            padding-bottom: 0.8rem;
+            margin-bottom: 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .card-header h3 {
+            color: var(--primary-color);
+        }
+
+        .badge {
+            background-color: #e8f5e9;
+            color: #2e7d32;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: bold;
+        }
+
+        .details-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.2rem;
+        }
+
+        .detail-item {
+            padding: 0.8rem;
+            background-color: #f9fbfd;
+            border-left: 4px solid var(--secondary-color);
+            border-radius: 4px;
+        }
+
+        .detail-item label {
+            display: block;
+            font-size: 0.85rem;
+            color: #666;
+            margin-bottom: 0.2rem;
+        }
+
+        .detail-item span {
+            font-weight: 600;
+            color: var(--text-color);
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+
+        button[type="submit"] {
+            border: none;
+            cursor: pointer;
+        }
+
+        footer {
+            background-color: var(--primary-color);
+            color: var(--white);
+            text-align: center;
+            padding: 1.5rem 1rem;
+            margin-top: 3rem;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 600px) {
+            header {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            nav ul {
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <h1>CARE FIRST</h1>
+            <span>PHARMACEUTICAL</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#verification">Tax Details</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h2>Welcome to CARE FIRST PHARMACEUTICAL</h2>
+        <p>Committed to quality healthcare services and pharmaceutical standards in Islamabad, Pakistan.</p>
+        <a href="#verification" class="btn">View Tax Certificate Info</a>
+    </section>
+
+    <main class="container">
+
+        <section id="verification" class="card">
+            <div class="card-header">
+                <h3>Taxpayer Registration Certificate</h3>
+                <span class="badge">Verified Company</span>
+            </div>
+            <div class="details-grid">
+                <div class="detail-item">
+                    <label>Registration No.</label>
+                    <span>0174018</span>
+                </div>
+                <div class="detail-item">
+                    <label>Date of Registration</label>
+                    <span>22-April-2021</span>
+                </div>
+                <div class="detail-item">
+                    <label>Type of Person</label>
+                    <span>Company</span>
+                </div>
+                <div class="detail-item">
+                    <label>Inc. No.</label>
+                    <span>850409545</span>
+                </div>
+                <div class="detail-item">
+                    <label>Inc. Date</label>
+                    <span>22-April-2021</span>
+                </div>
+                <div class="detail-item">
+                    <label>Name</label>
+                    <span>CARE FIRST PHARMACEUTICAL</span>
+                </div>
+                <div class="detail-item">
+                    <label>Tax Office</label>
+                    <span>CRO Islamabad</span>
+                </div>
+                <div class="detail-item">
+                    <label>Activity Type</label>
+                    <span>Business</span>
+                </div>
+                <div class="detail-item" style="grid-column: 1 / -1;">
+                    <label>Registered Address</label>
+                    <span>Paris Arcade Office 2, Ground Floor E-11/3 Markaz Islamabad, 44000 Pakistan</span>
+                </div>
+            </div>
+        </section>
+
+        <div class="grid-2">
+            <section id="about" class="card">
+                <div class="card-header">
+                    <h3>About Our Company</h3>
+                </div>
+                <p>CARE FIRST PHARMACEUTICAL is a legally registered corporate entity under the Federal Board of Revenue (FBR) Pakistan[cite: 2]. We ensure supreme quality standards and professional integrity in our business operations.</p>
+            </section>
+
+            <section id="contact" class="card">
+                <div class="card-header">
+                    <h3>Contact Us</h3>
+                </div>
+                <form onsubmit="event.preventDefault(); alert('Message sent successfully!');">
+                    <div>
+                        <input type="text" placeholder="Your Name" required>
+                    </div>
+                    <div>
+                        <input type="email" placeholder="Your Email" required>
+                    </div>
+                    <div>
+                        <textarea rows="4" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
+            </section>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>© 2026 CARE FIRST PHARMACEUTICAL. All rights reserved.</p>
+        <p style="font-size: 0.8rem; margin-top: 0.3rem; opacity: 0.8;">Registered address: Paris Arcade Office 2, Ground Floor E-11/3 Markaz Islamabad, 44000 Pakistan[cite: 2]</p>
+    </footer>
+
+</body>
+</html>
